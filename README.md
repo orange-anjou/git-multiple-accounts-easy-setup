@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This little was created to automate the setup of my git dev environnement. I'm using multiple git accounts (work internal GitLab, work external GitHub, personal etc...).  
+This little project was created to automate the setup of my git dev environnement. I'm using multiple git accounts (work internal GitLab, work external GitHub, personal etc...).  
 Using different accounts on the same computer can get quite messy if not configured properly.
 
 ## How does it work ?
