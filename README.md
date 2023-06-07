@@ -2,12 +2,42 @@
 
 ## Introduction
 
-This little was created to automate the setup of my git dev environnement. I'm using multiple git accounts (work private, work public, personal etc...).  
+This little was created to automate the setup of my git dev environnement. I'm using multiple git accounts (work internal GitLab, work external GitHub, personal etc...).  
 Using different accounts on the same computer can get quite messy if not configured properly.
 
-## How to use it
+## How does it work ?
 
-I think that it can't be simpler than that.
+In order to have a clean separation between all the GIT accounts, we use different folders. This means that we could for example have : 
+- PersonalProjects/
+- WorkProjects/
+- FreelanceProjects/
+Each of these directories will have a different GIT account and will automatically be configured to use the right SSH keys.
+
+To configure everything, we have to modify the following files : 
+- `~/.ssh/config`
+- `~/.gitconfig`
+
+But we also have to create specific files.  
+
+We have the account specifics git configurations :  
+- `~/.gitconfig-account01`
+- `~/.gitconfig-account02`
+
+We also have the different SSH keys that will be created : 
+- `~/.ssh/key-account01`
+- `~/.ssh/key-account01.pub`
+- `~/.ssh/key-account02`
+- `~/.ssh/key-account02.pub`
+
+## How to use it ?
+
+### Prerequities
+
+The only requirement is to have `ssh-keygen` installed as this is the tool used to generate the SSH keys.
+
+### Explanations
+
+You must first clone the repository.
 
 ```bash
 git clone git@github.com:orange-anjou/git-multiple-accounts-ssh-setup.git
@@ -31,6 +61,8 @@ Once you have configured all your profiles, you can execute the following.
 ```bash
 python3 main.py
 ```
+
+You will see in the output of the script that the public keys created are displayed. It is done on purpose to allow you to easily add those keys to some services like GitHub or GitLab in order to connect to them if needed.
 
 ## Todo
 
