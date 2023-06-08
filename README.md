@@ -2,21 +2,24 @@
 
 ## Introduction
 
-This little project was created to automate the setup of my git dev environnement. 
+This little project was created to automate the setup of my git dev environment. 
 I'm using multiple git accounts (work internal GitLab, work external GitHub, personal etc...). Using different accounts on the same computer can get quite messy if not configured properly.
 
 Here is what you will get : 
-- Automated GIT user configuration when initing a repository
+- Automated GIT user configuration when initializing a repository
 - Automated GIT user configuration when cloning a repository
 - Easy and custom SSH setup
 
 ## How does it work ?
 
 In order to have a clean separation between all the GIT accounts, we use different folders. This means that we could for example have : 
-- PersonalProjects/
-- WorkProjects/
-- FreelanceProjects/
-Each of these directories will have a different GIT account and will automatically be configured to use the right SSH keys.
+- `PersonalProjects/`
+- `WorkProjects/`
+- `FreelanceProjects/`  
+
+Each of these directories will have a different GIT account and will automatically be configured when cloning or initializing a repository.
+This means that if you clone a repository in the `WorkProjects/` directory, the GIT user will be configured with your work account.
+The SSH key used will also be the one associated with your work account.
 
 To configure everything, we have to modify the following files : 
 - `~/.ssh/config`
@@ -36,9 +39,12 @@ We also have the different SSH keys that will be created :
 
 ## How to use it ?
 
-### Prerequities
+### Prerequisites
 
-The only requirement is to have `ssh-keygen` installed as this is the tool used to generate the SSH keys.
+You need to have the following installed : 
+- `python3`
+- `ssh-keygen` as it is used to generate the SSH keys
+- `git` (obviously)
 
 ### Explanations
 
