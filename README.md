@@ -1,9 +1,14 @@
-# Git Multiple Accounts SSH Setup
+# Git Multiple Accounts Easy Setup
 
 ## Introduction
 
-This little project was created to automate the setup of my git dev environnement. I'm using multiple git accounts (work internal GitLab, work external GitHub, personal etc...).  
-Using different accounts on the same computer can get quite messy if not configured properly.
+This little project was created to automate the setup of my git dev environnement. 
+I'm using multiple git accounts (work internal GitLab, work external GitHub, personal etc...). Using different accounts on the same computer can get quite messy if not configured properly.
+
+Here is what you will get : 
+- Automated GIT user configuration when initing a repository
+- Automated GIT user configuration when cloning a repository
+- Easy and custom SSH setup
 
 ## How does it work ?
 
